@@ -15,6 +15,13 @@ class _MyAppState extends State<MyApp> {
 
   var numberr = 5;
   var num2 = 3;
+
+  void diceFace(){
+    setState(() {
+      numberr = Random().nextInt(6)+1;
+      num2 = Random().nextInt(6)+1;
+    });
+  }
   @override
   Widget build(BuildContext context) {
 
@@ -40,10 +47,7 @@ class _MyAppState extends State<MyApp> {
               Expanded(
                 child: TextButton(
                   onPressed: (){
-                    setState(() {
-                      numberr = Random().nextInt(6)+1;
-                      num2 = Random().nextInt(6)+1;
-                    });
+                    diceFace();
                   },
                   child: Image.asset('images/dice$numberr.png'),
                 ),
@@ -51,10 +55,7 @@ class _MyAppState extends State<MyApp> {
               Expanded(
                 child: TextButton(
                   onPressed: (){
-                    setState(() {
-                      numberr = Random().nextInt(6)+1;
-                      num2 = Random().nextInt(6)+1;
-                    });
+                    diceFace();
                   },
                   child: Image(
                     image: AssetImage('images/dice${num2}.png'),
