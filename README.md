@@ -1,4 +1,4 @@
-# untitled
+# Dicee
 
 A new Flutter project.
 
